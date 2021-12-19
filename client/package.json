@@ -1,0 +1,24 @@
+{
+  "source": "./src/index.html",
+  "scripts": {
+    "start": "parcel --public-url ./",
+    "watch": "parcel watch --public-url ./",
+    "build": "rm -rf dist/** && parcel build --public-url ./"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1",
+    "@parcel/transformer-webmanifest": "^2.0.1",
+    "autoprefixer": "^10.4.0",
+    "gh-pages": "^3.2.3",
+    "nodemon": "^2.0.15",
+    "parcel": "^2.0.1",
+    "postcss": "^8.3.11"
+  },
+  "browserslist": "defaults"
+}

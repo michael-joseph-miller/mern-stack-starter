@@ -1,26 +1,37 @@
 {
-  "name": "react-starter-app",
-  "version": "0.1.0",
-  "private": false,
-  "source": "./src/index.html",
+  "name": "mern-stack-starter",
+  "description": "MERN stack starter app",
+  "version": "1.0.0",
+  "author": "Michael Joseph Miller",
+  "license": "MIT",
+  "type": "module",
+  "main": "server.js",
   "scripts": {
-    "start": "parcel --open",
-    "build": "rm -rf dist/** && parcel build --public-url ./",
-    "deploy": "gh-pages -d dist/"
+    "install": "npm i && cd client/ && npm i",
+    "start": "node server.js",
+    "build": "cd client/ && npm run build",
+    "dev": "concurrently \"nodemon server.js\" \"cd client/ && npm run watch\""
   },
+  "keywords": [
+    "mern",
+    "starter",
+    "mongodb",
+    "express",
+    "react",
+    "node"
+  ],
   "dependencies": {
-    "normalize.css": "^8.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.0.1",
     "@parcel/transformer-sass": "^2.0.1",
     "@parcel/transformer-webmanifest": "^2.0.1",
-    "autoprefixer": "^10.4.0",
-    "gh-pages": "^3.2.3",
-    "parcel": "^2.0.1",
-    "postcss": "^8.3.11"
+    "concurrently": "^6.4.0",
+    "nodemon": "^2.0.15"
   },
-  "browserslist": "defaults"
+  "engines": {
+    "node": "^16.13.1",
+    "npm": "^8.3.0"
+  }
 }
